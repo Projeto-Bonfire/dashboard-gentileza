@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
  scroll-behavior: smooth;
+ 
+ @media (max-width: 820px) {
+   font-size: 12px;
+ }
 }
 p, a, h1 {
   color: ${({theme}) => theme.colors.text};

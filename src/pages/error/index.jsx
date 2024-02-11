@@ -1,19 +1,29 @@
 import React from 'react';
 
-import { Container, Box } from './styles';
+import { Container, Box, Informations } from './styles';
 
-import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
+import Button from "../../components/buttons";
 
 const Error = () => {
 
     return (
         <Container>
             <Box>
-                <p>error page</p>
+                <h1>4</h1>
+              <img src='../../public/images/logoBonfire.svg' width= '300px'/>
+              <h1>4</h1>
             </Box>
+          <Informations>
+          <p>Página não encontrada :(</p>
+          <Button 
+            name='Voltar pra tela inicial'
+            secondary='secondary'
+             onAction = {() => window.location.href = '/dashboard'}onAction = {() => window.location.href = '/dashboard'}
+            />
+          </Informations>
         </Container>
     )
 }
 
-export default Error
+export default Error; 
+ 
