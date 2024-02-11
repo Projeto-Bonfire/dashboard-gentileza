@@ -8,7 +8,9 @@ import {
   AiOutlineUserAdd,
   AiOutlineNotification,
   AiOutlineFileAdd,
-  AiOutlineLogout
+  AiOutlineLogout,
+  AiOutlineLineChart,
+  AiOutlineFundView
 } from "react-icons/ai";
 
 
@@ -44,6 +46,16 @@ const Navbar = ({openMenu, setOpenMenu}) => {
       name: 'Criar Aviso',
       link: '/create-notification',
       Icon: AiOutlineFileAdd
+    },
+    {
+      name: 'Investimentos',
+      link: '/investiments',
+      Icon: AiOutlineFundView
+    },
+    {
+      name: 'Criar Investimentos',
+      link: '/create-investiments',
+      Icon: AiOutlineLineChart
     },
     
   ];

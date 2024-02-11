@@ -37,7 +37,7 @@ export const ButtonContainer = styled.button`
   background-color: transparent;
   transition: ease .3s;
   align-items: center;
-  padding: 21px 21px;
+  padding: 15px 21px;
   border-radius: 5px;
   display: flex;
 

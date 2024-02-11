@@ -8,6 +8,8 @@ import Users from '../pages/users';
 import Warnings from '../pages/warns';
 import CreateUsers from '../pages/createUsers';
 import CreateWarns from '../pages/createWarns';
+import Investiments from '../pages/investiments';
+import CreateInvestiments from '../pages/createInvestiments';
 
 
   export const Router = () => {
@@ -23,6 +25,8 @@ import CreateWarns from '../pages/createWarns';
           <Route path="/create-user" element={<CreateUsers />}/>
           <Route path="/notifications" element={<Warnings />}/>
           <Route path="/create-notification" element={<CreateWarns />}/>
+          <Route path="/investiments" element={<Investiments />}/>
+          <Route path="/create-Investiments" element={<CreateInvestiments />}/>
         </Routes>
       </BrowserRouter>
     )
