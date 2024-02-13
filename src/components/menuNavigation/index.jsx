@@ -18,9 +18,9 @@ const MenuNavigation = ({option, onAction}) => {
         <AiOutlineMore color={"#fafafa"} size={24} />
       </MenuButton>
       <Menu inView={inView}>
-        {option.map((item, index) => {
-       return <Button key={index} inView={inView} onClick={() => onAction}>{item}</Button>
-        })}
+        {option.map((item, index) => (
+      <Button key={index} inView={inView} onClick={() => onAction(index)}>{item.icon}</Button>
+        ))}
       </Menu>
     </div>
   );

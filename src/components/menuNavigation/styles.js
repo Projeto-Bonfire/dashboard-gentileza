@@ -22,6 +22,7 @@ backdrop-filter: ${({select}) => select ? 'brightness(120%)' : 'brightness(100%)
 
 export const Menu = styled.div`
 position: absolute;
+overflow-y: hidden;
 transition: ease-in-out .3s;
 border-radius: 4px;
 right: ${({inView}) => inView == true ? '80px' : '0px'};

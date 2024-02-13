@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import {Container, Section, Data, TextArea, Edit, MenuButton, Menu} from './styles';
-import {AiOutlineClockCircle, AiOutlineMore} from 'react-icons/ai';
+import {AiOutlineClockCircle, AiOutlineMore, AiOutlineForm, AiOutlineCopy} from 'react-icons/ai';
 import MenuNavigation from '../menuNavigation'
 
 
@@ -17,6 +17,8 @@ const WarnContainer = ({
   onAction
 }) => {
 
+  
+
   const formattedDate = new Date(date).toLocaleString(); 
  const [select, setSelect] = useState(false);
  const [inView, setInView] = useState(false);
@@ -30,7 +32,7 @@ const WarnContainer = ({
     <Section>
       <Edit>
         <h2>{title}</h2>
-        <MenuNavigation option={["1", "2"]}/>
+        <MenuNavigation option={data} onAction={onAction} />
       </Edit >
         {showIcon && (
       <TextArea>{text}</TextArea>

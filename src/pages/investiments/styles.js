@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   overflow-y: scroll;
   display: flex;

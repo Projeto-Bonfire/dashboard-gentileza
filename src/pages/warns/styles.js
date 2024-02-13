@@ -22,3 +22,15 @@ export const Container = styled.div`
 `
 
 
+export const Options = styled.div`
+  margin: auto;
+  width: 80%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+
+
+   @media (max-width: 414px) {
+     margin-top: 60px;
+   }
+`

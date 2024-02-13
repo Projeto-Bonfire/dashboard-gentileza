@@ -11,17 +11,17 @@
     "src/components/userInformation/index.jsx": [
       {
         "id": "4a2830aa-59af-482d-be4c-9355fe3430cb",
-        "line": 18,
-        "version": 544,
-        "index": 474
+        "line": 10,
+        "version": 911,
+        "index": 284
       }
     ],
     "src/pages/createUsers/index.jsx": [
       {
         "id": "ccfec581-d5ad-43af-a622-872f737fd240",
-        "line": 17,
-        "version": 752,
-        "index": 516
+        "line": 24,
+        "version": 1164,
+        "index": 577
       }
     ]
   }

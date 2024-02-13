@@ -60,9 +60,7 @@ const Navbar = ({openMenu, setOpenMenu}) => {
     
   ];
 
-  const logout = () => {
-     window.location.href = "/";
-   }
+
     const OpenMenu = () => {
       return (
         <OpenMenuContainer
@@ -95,7 +93,7 @@ return (
               ))
             }
 
-<Logout onClick={() => logout()}><AiOutlineLogout color={'#fafafa'} size={24}/></Logout>
+          <Logout onClick={() => {localStorage.removeItem('token'); location.assign("/")}}><AiOutlineLogout color={'#fafafa'} size={24}/></Logout>
         </Container>
 
 

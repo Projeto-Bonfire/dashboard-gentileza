@@ -21,7 +21,7 @@ width: 100%;
   border-style: none;
   padding: 30px;
   outline: none;
-  height: 30vh;
+  height: 25vh;
   width: 100%;
 
 }

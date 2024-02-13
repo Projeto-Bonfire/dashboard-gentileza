@@ -5,6 +5,7 @@ justify-content: space-between;
 align-items: center;
 margin: 0 auto;
 display: flex;
+
 width: 80%;
 
 @media(max-width: 414px) {

@@ -21,18 +21,22 @@ export const Container = styled.div`
 `;  
 
 export const Options = styled.div`
-  width: 60%;
+  margin: auto;
+  width: 70%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
   
-   @media (max-width: 820px) {
+   
+   @media (max-width: 414px) {
      margin-top: 60px;
-     width: 80%;
    }
 `
 
 export const UsersBox = styled.div`
  flex-direction: column;
  display: flex;
- width: 80%;
+ width: 90%;
  gap: 15px;
  
  @media (max-width: 820px) {
