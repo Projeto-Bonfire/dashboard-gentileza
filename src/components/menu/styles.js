@@ -9,6 +9,7 @@ export const Container = styled.div`
   padding: ${({isOpen}) => isOpen ? '15px' : '0'};
   color:${({theme}) => theme.colors.text};
   transition: .3s ease-in-out;
+  box-sizing: border-box;
   flex-direction: column;
   background: #363636;
   overflow-x: auto;
