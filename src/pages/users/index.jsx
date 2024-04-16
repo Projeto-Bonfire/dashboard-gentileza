@@ -37,20 +37,19 @@ const Users = () => {
     { icon: <AiOutlineCopy/>, name: 'copy' }
   ]; 
   
-  useEffect(() => {
-    const getAllUsers = async () => {
-      try {
-        var response = await api.get('user/admin');
-        setUsersList(response.data);
-        setRemoveLoading(true);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-  getAllUsers();
-  }, []);
+  // useEffect(() => {
+  //     try {
+  //       var response = await api.get('user/admin');
+  //       setUsersList(response.data);
+  //       setRemoveLoading(true);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  // getAllUsers();
+  // }, []);
 
-
+//está dando problema 
 
   function CloseEdit() {
     setOpenLayoutEdit(false);

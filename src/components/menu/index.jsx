@@ -1,106 +1,72 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { Container, ButtonContainer, OpenMenuContainer, Logout, } from './styles';
-import { 
-  AiOutlineHome,
-  AiOutlineTeam,
-  AiOutlineUserAdd,
-  AiOutlineNotification,
-  AiOutlineFileAdd,
-  AiOutlineLogout,
-  AiOutlineLineChart,
-  AiOutlineFundView
+import React, { useState } from "react";
+import ButtonDropdownMenu from "../buttonDropdownMenu";
+import { Container, CloseMenu, DropdownSchool, Config } from "./styles";
+import {
+  AiOutlineUser,
+  AiOutlineDollar,
+  AiOutlineTool,
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiTwotoneSetting,
 } from "react-icons/ai";
 
-
-const Navbar = ({openMenu, setOpenMenu}) => {
-
-
-  const [select, setSelect] = useState('');
-  let navigate = useNavigate();
+const Menu = ({ openMenu, setOpenMenu }) => {
   let isOpen = openMenu;
 
   const data = [
     {
-      name: 'Dashboard',
-      link: '/dashboard',
-      Icon: AiOutlineHome 
+      icon: AiOutlineUser,
+      title: "padrão",
     },
     {
-      name: 'Usuários',
-      link: '/users',
-      Icon: AiOutlineTeam
+      icon: AiOutlineDollar,
+      title: "Economia",
     },
     {
-      name: 'Criar Usuário',
-      link: '/create-user',
-      Icon: AiOutlineUserAdd 
+      icon: AiOutlineTool,
+      title: "Administração",
     },
-    {
-      name: 'Avisos',
-      link: '/notifications',
-      Icon: AiOutlineNotification 
-    },
-    {
-      name: 'Criar Aviso',
-      link: '/create-notification',
-      Icon: AiOutlineFileAdd
-    },
-    {
-      name: 'Investimentos',
-      link: '/investiments',
-      Icon: AiOutlineFundView
-    },
-    {
-      name: 'Criar Investimentos',
-      link: '/create-investiments',
-      Icon: AiOutlineLineChart
-    },
-    
   ];
+  return (
+    <Container isOpen={isOpen}>
+      {!isOpen && (
+        <AiOutlineMenu
+          onClick={() => setOpenMenu(!openMenu)}
+          color={"#fafafa"}
+          size={24}
+        />
+      )}
 
+      {isOpen && (
+        <>
+          <section>
+            <CloseMenu onClick={() => setOpenMenu(!openMenu)}>
+              <AiOutlineClose color={"#fafafa"} size={24} />
+            </CloseMenu>
+            <div>
+              {"Undefined"}
+              <DropdownSchool>
+                <option> polivalente</option>
+                <option> estadual</option>
+              </DropdownSchool>
+            </div>
 
-    const OpenMenu = () => {
-      return (
-        <OpenMenuContainer
-         isOpen={isOpen}
-          onClick={() => {
-            setOpenMenu(!openMenu);
-          }}>
-        </OpenMenuContainer>
-      )
-    }
+            <Config>
+              <AiTwotoneSetting color={"#fafafa"} size={24} />
+            </Config>
+          </section>
 
-return (
-        <Container isOpen={isOpen}>
+          {data.map((item, index) => (
+            <ButtonDropdownMenu
+              icon={item.icon}
+              title={item.title}
+              key={index}
+            />
+          ))}
+        </>
+      )}
+    </Container>
+  );
+};
 
-          <OpenMenu/>
-            {
-
-              data.map(({Icon, name, link}, index) => (
-                <ButtonContainer Icon={Icon} select={select} name={name} link={link} key={index} isOpen={isOpen} onClick={() => {
-                  setSelect(name);
-                  navigate(link);
-
-
-                }}>
-                  <Icon color={'#fafafa'} size={24}/>    
-                  {isOpen ? <p>{name}</p> : ''}
-                </ButtonContainer>
-
-
-              ))
-            }
-
-          <Logout onClick={() => {localStorage.removeItem('token'); location.assign("/")}}><AiOutlineLogout color={'#fafafa'} size={24}/></Logout>
-        </Container>
-
-
-  )
-
-}
-
-export default Navbar;
-
-
+export default Menu;

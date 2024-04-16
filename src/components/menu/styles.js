@@ -1,91 +1,72 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: ${({isOpen}) => isOpen ? '250px' : '100px'};
-  border-right: 1px solid rgba(255, 255, 255, .3);
-  background-color: rgba(54, 54, 54, 1);
+
+  justify-content: ${({isOpen}) => isOpen ? 'start' : 'center'};
+  align-items: ${({isOpen}) => isOpen ? 'start' : 'center'};
+  width: ${({isOpen}) => isOpen ? '250px' : '50px'};
+  height: ${({isOpen}) => isOpen ? '75%' : '50px'};
+  padding: ${({isOpen}) => isOpen ? '15px' : '0'};
+  color:${({theme}) => theme.colors.text};
+  transition: .3s ease-in-out;
   flex-direction: column;
-  box-sizing: border-box;
-  transition: .3s ease;
-  align-items: center;
-  padding: 30px 15px;
+  background: #363636;
+  overflow-x: auto;
+  overflow-y: auto;
+  position: fixed;
   display: flex;
-z-index: 10;
-  height: 100%;
-  gap: 5px;
-
-@media (max-width: 414px) {
-  height: 40px;
-  overflow-y: hidden;
-  width: 100%;
-  flex-direction: row;
-
-position: absolute;
-top: 0;
-  overflow-x: scroll;
 
   &::-webkit-scrollbar {
     display: none;
   }
-}
-  `
 
-export const ButtonContainer = styled.button`		
-  width: ${({isOpen}) => isOpen ? '220px' : '66.5px'};
-  backdrop-filter: ${({select, name}) => select == name ? 
-  'brightness(120%)' : 'brightness(100%)'};
-  background-color: transparent;
-  transition: ease .3s;
-  align-items: center;
-  padding: 15px 21px;
-  border-radius: 5px;
-  display: flex;
+ & > section {
+   padding-bottom: 25px;
+   align-items: center;
+   flex-direction: row;
+   display: flex;
+   width: 100%;
+   gap: 10px;
+ }
 
+ & > section > div {
+   flex-direction: column;
+   align-items: end;
+   display: flex;
+   width: 60%;
+   gap: 5px;
+ }
 
-  border: none;
-  cursor: pointer;
-  gap: 15px;
-
-  &:hover {
-    backdrop-filter: brightness(120%);
+  @media (max-width: 414px) {
+    width: ${({isOpen}) => isOpen ? '100%' : '60px'};
   }
-`
-
-export const Logout = styled.button`
-width: ${({isOpen}) => isOpen ? '220px' : '66.5px'};
-backdrop-filter: ${({isSelect}) => isSelect ? 
-'brightness(120%)' : 'brightness(100%)'};
-background-color: transparent;
-transition: ease .3s;
-place-items: center;
-padding: 13px 21px;
-border-radius: 5px;
-display: grid;
-heigth: 50px;
-border: none;
+  `
+export const CloseMenu = styled.button `
+background: transparent;
 cursor: pointer;
-gap: 13px;
+border: none;
+height: 50px;
+width: 50px; 
+`
 
-&:hover {
-  backdrop-filter: brightness(120%);
+export const DropdownSchool = styled.select`
+color:${({theme}) => theme.colors.text};
+background: transparent;
+cursor: pointer;
+outline: none;
+border: none;
+width: auto;
+
+& > option {
+  background-color: #363636;
+  outline: none;
+  border: none;
 }
 `
 
-export const OpenMenuContainer = styled.button`
-  background-image: url('../../public/images/logoBonfire.svg');
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-clip: contain;
-  background-size: 150%;
-  transition: ease 0.3s;
-  margin-bottom: 15px;
-  cursor: pointer;
-  border: none;
-  height: 60px;
-  width: 60px;
+export const Config = styled.div`
+background: transparent;
+cursor: pointer;
+border: none;
+`
 
-  &:hover {
-    opacity: 85%;
-  }
-  `
