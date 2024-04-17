@@ -58,6 +58,7 @@ O projeto em questão representa uma iniciativa de natureza privada integrante d
 - templete personalizado
 - react-router-dom
 - Replit
+- React Bootstrap Select
 
 
 
