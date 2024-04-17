@@ -35,7 +35,7 @@ const Login = () => {
           content: "custom-content-class",
         },
       });
-      window.location.href = "/dashboard";
+      window.location.href = "/school-options";
     } catch (error) {
       console.log(error);
       setPass("Usuário inválido.");

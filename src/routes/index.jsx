@@ -10,6 +10,7 @@ import CreateUsers from '../pages/createUsers';
 import CreateWarns from '../pages/createWarns';
 import Investiments from '../pages/investiments';
 import CreateInvestiments from '../pages/createInvestiments';
+import SchoolOptions from '../pages/schoolOptions';
 
 
   export const Router = () => {
@@ -21,6 +22,7 @@ import CreateInvestiments from '../pages/createInvestiments';
           <Route path="/main" element={<Main />}/>
           <Route path="/" element={<Login />}/>
           <Route path="/dashboard" element={<Dashboard />}/>
+          <Route path="/school-options" element={<SchoolOptions />}/>
           <Route path="/users" element={<Users />}/>
           <Route path="/create-user" element={<CreateUsers />}/>
           <Route path="/notifications" element={<Warnings />}/>

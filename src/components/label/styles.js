@@ -1,11 +1,10 @@
 import styled from 'styled-components'
+
 export const Container = styled.div`
-padding: ${({height}) => height} 0;
-width: 100%;
-text-transform: capitalize;
 color: ${({theme}) => theme.colors.secondaryText};
+width: 100%;
 
 @media (max-width: 820px) {
-font-size: 12px;
+font-size: 13px;
 }
 `

@@ -6,7 +6,7 @@ box-sizing: border-box;
   color: ${({theme}) => theme.colors.text};
   padding: ${({height}) => height}px 0;
   width: ${({width}) => width}vw;
-  min-width: 25vw;
+  min-width: 15vw;
   text-transform: uppercase;
   box-sizing: border-box;
   transition: ease .3s;
@@ -18,6 +18,10 @@ box-sizing: border-box;
   cursor: pointer;
 
   margin: min(10px) ${({margin}) => margin};
+  
+  @media (max-width: 820px) {
+    width: 25vw;
+  }
 
 &:hover {
 opacity: 85%;
